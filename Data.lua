@@ -111,6 +111,11 @@ end
 -- Outland --
 -------------
 
+points["ShadowmoonValley"] = {
+	[57384968] = { 38091, "The Black Temple", "Loot the Warden's Scrollcase inside the Warden's Cage." },
+	[70994642] = { 38064, "The Burning Legion", "Inside the Black Temple raid.\n\nDefeat Illidan.\nThis is NOT a guaranteed drop." },
+}
+
 
 ---------------
 -- Northrend --
