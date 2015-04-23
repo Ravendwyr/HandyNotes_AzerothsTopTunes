@@ -1,0 +1,11 @@
+## Interface: 60100
+## Title: HandyNotes_AzerothsTopTunes
+## Notes: Displays the locations of Garrison music scrolls.
+## Author: Ethan Centaurai
+## Version: @project-version@
+## X-Category: Map & Minimap
+## SavedVariables: HandyNotes_AzerothsTopTunesDB
+## RequiredDeps: HandyNotes
+
+Core.lua
+Data.lua
