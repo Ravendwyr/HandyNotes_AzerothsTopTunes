@@ -89,6 +89,10 @@ points["Darnassus"] = {
 	[43007600] = { 38100, "Shalandis Isle", "Loot the chest on the top floor of the Temple of the Moon,\non the wall opposite Tyrande Whisperwind." },
 }
 
+points["Tanaris"] = {
+	[61705195] = { 38066, "The Shattering", "Inside the Dragon Soul raid.\n\nDefeat Madness of Deathwing.\nThis is NOT a guaranteed drop." },
+}
+
 points["Winterspring"] = {
 	[68007390] = { 38089, "Mountains", "Loot the Frozen Supplies in a nook at the base of the pillar." },
 }
