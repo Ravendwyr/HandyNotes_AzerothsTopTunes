@@ -183,7 +183,7 @@ points["ValeofEternalBlossoms"] = {
 
 if playerFaction == "Alliance" then
 	points["Krasarang"] = {
-		[10605360] = { 38071, "High Seas", "Purchased from Proveditor Grantley for 500 [Domination Point Commission]." },
+		[89533354] = { 38071, "High Seas", "Purchased from Proveditor Grantley for 500 [Domination Point Commission]." },
 	}
 end
 
