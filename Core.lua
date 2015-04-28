@@ -50,6 +50,14 @@ local points = AzerothsTopTunes.points
 
 
 -- plugin handler for HandyNotes
+local function infoFromCoord(mapFile, coord)
+	mapFile = gsub(mapFile, "_terrain%d+$", "")
+
+	local point = points[mapFile] and points[mapFile][coord]
+
+	return point[2], point[3]
+end
+
 function AzerothsTopTunes:OnEnter(mapFile, coord)
 	local tooltip = self:GetParent() == WorldMapButton and WorldMapTooltip or GameTooltip
 
@@ -59,8 +67,10 @@ function AzerothsTopTunes:OnEnter(mapFile, coord)
 		tooltip:SetOwner(self, "ANCHOR_RIGHT")
 	end
 
-	tooltip:SetText(points[mapFile][coord][2])
-	tooltip:AddLine(points[mapFile][coord][3], 1, 1, 1)
+	local name, note = infoFromCoord(mapFile, coord)
+
+	tooltip:SetText(name)
+	tooltip:AddLine(note, 1, 1, 1)
 	tooltip:Show()
 end
 
@@ -77,7 +87,9 @@ local function createWaypoint(_, mapFile, coord)
 	local x, y = HandyNotes:getXY(coord)
 	local m = HandyNotes:GetMapFiletoMapID(mapFile)
 
-	TomTom:AddMFWaypoint(m, nil, x, y, { title = points[mapFile][coord][2] })
+	local name = infoFromCoord(mapFile, coord)
+
+	TomTom:AddMFWaypoint(m, nil, x, y, { title = name })
 end
 
 do
@@ -139,7 +151,7 @@ do
 		if button == "RightButton" and not down then
 			currentZone = mapFile
 			currentCoord = coord
-			musicScroll = points[mapFile][coord][2]
+			musicScroll = infoFromCoord(mapFile, coord)
 
 			ToggleDropDownMenu(1, nil, dropdown, self, 0, 0)
 		end
