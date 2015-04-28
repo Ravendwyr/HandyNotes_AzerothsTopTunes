@@ -20,16 +20,8 @@ local defaults = { profile = { completed = false, icon_scale = 1.4, icon_alpha =
 -- upvalues
 local _G = getfenv(0)
 
-local C_Timer_NewTicker = _G.C_Timer.NewTicker
-local CalendarGetDate = _G.CalendarGetDate
-local CalendarGetDayEvent = _G.CalendarGetDayEvent
-local CalendarGetMonth = _G.CalendarGetMonth
-local CalendarGetNumDayEvents = _G.CalendarGetNumDayEvents
-local CalendarSetAbsMonth = _G.CalendarSetAbsMonth
 local CloseDropDownMenus = _G.CloseDropDownMenus
 local GameTooltip = _G.GameTooltip
-local GetAchievementCriteriaInfo = _G.GetAchievementCriteriaInfo
-local GetGameTime = _G.GetGameTime
 local GetQuestsCompleted = _G.GetQuestsCompleted
 local gsub = _G.string.gsub
 local LibStub = _G.LibStub
