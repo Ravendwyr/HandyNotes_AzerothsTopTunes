@@ -1,4 +1,4 @@
-## Interface: 60100
+## Interface: 60200
 ## Title: HandyNotes_AzerothsTopTunes
 ## Notes: Displays the locations of Garrison music scrolls.
 ## Author: Ethan Centaurai
