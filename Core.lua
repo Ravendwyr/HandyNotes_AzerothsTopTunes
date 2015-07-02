@@ -168,7 +168,8 @@ do
 
 	-- custom iterator we use to iterate over every node in a given zone
 	local function iter(t, prestate)
-		if not t then return nil end
+		if not completedQuests[38356] or not completedQuests[37961] then return end
+		if not t then return end
 
 		local state, value = next(t, prestate)
 
@@ -179,12 +180,11 @@ do
 
 			state, value = next(t, state) -- get next data
 		end
-
-		return nil, nil, nil, nil
 	end
 
 	local function iterCont(t, prestate)
-		if not t then return nil end
+		if not completedQuests[38356] or not completedQuests[37961] then return end
+		if not t then return end
 
 		local zone = t.Z
 		local mapFile = HandyNotes:GetMapIDtoMapFile(t.C[zone])
@@ -276,14 +276,15 @@ local options = {
 function AzerothsTopTunes:OnEnable()
 	HandyNotes:RegisterPluginDB("AzerothsTopTunes", self, options)
 
+	completedQuests = GetQuestsCompleted(completedQuests)
 	db = LibStub("AceDB-3.0"):New("HandyNotes_AzerothsTopTunesDB", defaults, "Default").profile
 
 	AzerothsTopTunes:Refresh()
 	AzerothsTopTunes:RegisterEvent("CRITERIA_UPDATE", "Refresh")
 end
 
-function AzerothsTopTunes:Refresh()
-	completedQuests = GetQuestsCompleted(completedQuests)
+function AzerothsTopTunes:Refresh(_, questID)
+	if questID then completedQuests[questID] = true end
 	self:SendMessage("HandyNotes_NotifyUpdate", "AzerothsTopTunes")
 end
 
