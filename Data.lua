@@ -164,6 +164,10 @@ end
 -- Cataclysm --
 ---------------
 
+points["DarkmoonFaireIsland"] = {
+	[51507505] = { 38099, "Darkmoon Carousel", "Purchased from Chester for 90 [Darkmoon Prize Ticket]." }
+}
+
 
 --------------
 -- Pandaria --
