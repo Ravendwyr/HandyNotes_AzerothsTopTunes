@@ -63,6 +63,7 @@ function AzerothsTopTunes:OnEnter(mapFile, coord)
 	if TomTom then
 		tooltip:AddLine(" ")
 		tooltip:AddLine("Right-click to set a waypoint.", 1, 1, 1)
+		tooltip:AddLine("Control-Right-click to set waypoints to every music roll.", 1, 1, 1)
 	end
 
 	tooltip:Show()
@@ -84,11 +85,26 @@ local function createWaypoint(mapFile, coord)
 	local name = infoFromCoord(mapFile, coord)
 
 	TomTom:AddMFWaypoint(m, nil, x, y, { title = name })
+	TomTom:SetClosestWaypoint()
+end
+
+local function createAllWaypoints()
+	for mapFile, coords in next, points do
+		for coord, questID in next, coords do
+			if coord and (db.completed or not completedQuests[questID]) then
+				createWaypoint(mapFile, coord)
+			end
+		end
+	end
 end
 
 function AzerothsTopTunes:OnClick(button, down, mapFile, coord)
 	if TomTom and button == "RightButton" and not down then
-		createWaypoint(mapFile, coord)
+		if IsControlKeyDown() then
+			createAllWaypoints()
+		else
+			createWaypoint(mapFile, coord)
+		end
 	end
 end
 
