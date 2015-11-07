@@ -22,10 +22,10 @@ local _G = getfenv(0)
 
 local GameTooltip = _G.GameTooltip
 local GetQuestsCompleted = _G.GetQuestsCompleted
+local IsControlKeyDown = _G.IsControlKeyDown
 local gsub = _G.string.gsub
 local LibStub = _G.LibStub
 local next = _G.next
-local pairs = _G.pairs
 local UIParent = _G.UIParent
 local WorldMapButton = _G.WorldMapButton
 local WorldMapTooltip = _G.WorldMapTooltip
