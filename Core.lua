@@ -218,9 +218,9 @@ local options = {
 
 -- initialise
 function AzerothsTopTunes:OnEnable()
-	local HereBeDragons = LibStub("HereBeDragons-1.0", true)
+	local HereBeDragons = LibStub("HereBeDragons-2.0", true)
 	if not HereBeDragons then
-		HandyNotes:Print("Your installed copy of HandyNotes is out of date and the Azeroth's Top Tunes plug-in will not work correctly.  Please update HandyNotes to version 1.4.0 or newer.")
+		HandyNotes:Print("Your installed copy of HandyNotes is out of date and the Hallow's End plug-in will not work correctly.  Please update HandyNotes to version 1.5.0 or newer.")
 		return
 	end
 
