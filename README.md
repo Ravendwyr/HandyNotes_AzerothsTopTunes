@@ -3,7 +3,7 @@
 Displays the locations of Garrison music scrolls.
 
 [![Builder](https://img.shields.io/travis/com/ravendwyr/handynotes_azerothstoptunes.svg?label=Build&logo=travis&maxAge=600&style=popout)](https://travis-ci.com/github/Ravendwyr/HandyNotes_AzerothsTopTunes)
-[![Version](https://img.shields.io/github/tag-date/ravendwyr/handynotes_azerothstoptunes.svg?label=Version&logo=codeigniter&maxAge=600&style=popout)](https://www.curseforge.com/wow/addons/handynotes_azerothstoptunes/files/all)
+[![Version](https://img.shields.io/github/tag-date/ravendwyr/handynotes_azerothstoptunes.svg?label=Version&logo=curseforge&maxAge=600&style=popout)](https://www.curseforge.com/wow/addons/handynotes_azerothstoptunes/files/all)
 [![Tracker](https://img.shields.io/github/issues/ravendwyr/handynotes_azerothstoptunes.svg?label=Issues&logo=github&maxAge=600&style=popout)](https://github.com/Ravendwyr/HandyNotes_AzerothsTopTunes/issues)
 
 ***
