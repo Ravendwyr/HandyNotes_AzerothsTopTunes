@@ -205,8 +205,7 @@ function AzerothsTopTunes:OnEnable()
 
 	HandyNotes:RegisterPluginDB("AzerothsTopTunes", self, options)
 
-	local tmpPairs = C_QuestLog.GetAllCompletedQuestIDs()
-	for _, id in ipairs(tmpPairs) do 
+	for _, id in ipairs(C_QuestLog.GetAllCompletedQuestIDs()) do
 		completedQuests[id] = true
 	end
 
